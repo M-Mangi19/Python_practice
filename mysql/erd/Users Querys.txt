@@ -1,0 +1,50 @@
+Users Querys
+
+Create 3 users:
+
+	insert into users (first_name, last_name)
+	values ("Matt", "Mangiaracina");
+
+	insert into users (first_name, last_name)
+	values ("Katrina", "Mangiaracina");
+
+	insert into users (first_name, last_name)
+	values ("Ellen", "Ripley");
+
+Retrieve all the users:
+
+	select * from users
+
+Retrieve first user using their email address
+	
+	select * from users
+	where email =("matt@email.com")
+
+
+Retrieve the last user using their id
+
+	select * from users
+	where id = 6
+
+
+Query: Change the user with id=3 so their last name is Pancakes
+
+	 update users_schema.users
+ 	set last_name = "Pancakes"
+ 	where id = 3;
+
+Query: Delete the user with id=2 from the database
+
+	Delete from users
+ 	where id = 2	
+
+
+Query: Get all the users, sorted by their first name
+
+	Select * from users
+ 	order by first_name 
+
+BONUS Query: Get all the users, sorted by their first name in descending order
+
+	Select * from users
+ 	order by first_name desc

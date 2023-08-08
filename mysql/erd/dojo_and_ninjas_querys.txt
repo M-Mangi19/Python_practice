@@ -1,0 +1,80 @@
+										dojo_and_ninjas_querys
+
+
+Query: Create 3 new dojos
+
+	insert dojos (name)
+	values ("dojo1");
+
+	insert dojos (name)
+	values ("dojo2");
+
+	insert dojos (name)
+	values ("dojo3");
+
+Query: Delete the 3 dojos you just created
+
+	delete from dojos
+	where id = 1; 
+	delete from dojos
+	where id = 2; 
+	delete from dojos
+	where id =3;
+
+Query: Create 3 more dojos
+
+	insert into dojos (name)
+	value ("dojo1");
+	insert into dojos (name)
+	value ("dojo2");
+	insert into dojos (name)
+	value ("dojo3");
+
+Query: Create 3 ninjas that belong to the first dojo
+
+	insert into ninjas (first_name, last_name, age, dojo_id)
+	values ("Matt", "Mang", "41", "4");
+
+	insert into ninjas (first_name, last_name, age, dojo_id)
+	values ("Trina", "Mang", "41", "4");
+
+	insert into ninjas (first_name, last_name, age, dojo_id)
+	values ("Kidney-Bean", "Mang", "0", "4");
+
+Query: Create 3 ninjas that belong to the second dojo
+
+	insert into ninjas (first_name, last_name, age, dojo_id)
+	values ("Pele", "Drago", "18", "5");
+
+	insert into ninjas (first_name, last_name, age, dojo_id)
+	values ("Ellen", "Ripley", "5", "5");
+
+	insert into ninjas (first_name, last_name, age, dojo_id)
+	values ("Talula", "Bear", "3", "5");
+
+
+Query: Create 3 ninjas that belong to the third dojo
+
+	insert into ninjas (first_name, last_name, age, dojo_id)
+	values ("Tony", "Stark", "38", "6");
+	
+	insert into ninjas (first_name, last_name, age, dojo_id)
+	values ("Steve", "Rodgers", "104", "6");
+	
+	insert into ninjas (first_name, last_name, age, dojo_id)
+	values ("Thor", "Odinson", "1500", "6");
+
+Query: Retrieve all the ninjas from the first dojo
+
+	select * from ninjas
+	where dojo_id = 1;
+
+Query: Retrieve all the ninjas from the last dojo
+
+	select * from ninjas
+	where dojo_id = 3;
+
+Query: Retrieve the last ninja's dojo
+
+	select dojo_id from ninjas
+	where id = 9;
